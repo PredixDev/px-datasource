@@ -1,0 +1,20 @@
+{
+  "name": "px-oauth",
+  "version": "0.0.1",
+  "authors": [
+    "Predix Experience"
+  ],
+  "description": "OAuth 2.0 implicit grant module for Cloud Foundry UAA",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "predix",
+    "oauth"
+  ],
+  "dependencies": {
+    "oauth-ng": "~0.3.6"
+  },
+  "license": "MIT"
+}
