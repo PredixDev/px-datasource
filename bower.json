@@ -5,7 +5,7 @@
     "Predix Experience"
   ],
   "description": "OAuth 2.0 implicit grant module for Cloud Foundry UAA",
-  "main": "main.js",
+  "main": "src/main.js",
   "moduleType": [
     "amd"
   ],
@@ -13,9 +13,14 @@
     "predix",
     "oauth"
   ],
+  "ignore": [
+    ".jshintrc",
+    ".gitignore"
+  ],
   "dependencies": {
     "angular": "1.3.12",
-    "oauth-ng": "git://github.com/muymoo/oauth-ng.git#update_angular_1.3.12"
+    "oauth-ng": "https://github.com/muymoo/oauth-ng.git#update_angular_1.3.12",
+    "angular-ui-router": "~0.2.13"
   },
   "license": "MIT"
 }
