@@ -1,1 +1,1 @@
-define(['./module', './px-oauth-directive'], function() {});
+require(['./px-oauth-directive'], function() {});

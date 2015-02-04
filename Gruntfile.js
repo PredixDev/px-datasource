@@ -30,13 +30,21 @@ module.exports = function(grunt) {
                 options: {
                     baseUrl: 'src',
                     mainConfigFile: 'config.js',
-                    name: 'main',
                     out: 'dist/px-oauth.min.js',
+                    name : 'px-oauth-directive',
+                    optimize: 'none',
+                    skipDirOptimize: false,
                     paths: {
                         angular: 'empty:',
                         'angular-ui-router': 'empty:',
                         ngstorage: 'bower_components/ngstorage/ngStorage.min',
-                        'oauth-ng': 'bower_compaonents/oauth-ng/dist/oauth-ng'
+                        'oauth-ng': 'bower_components/oauth-ng/dist/oauth-ng'
+                    },
+                    shim: {
+                        'oauth-ng': {
+                            deps: ['angular', 'ngstorage'],
+                            exports: 'oauth-ng'
+                        }
                     }
                 }
             }
