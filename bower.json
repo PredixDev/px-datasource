@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "angular": "1.3.12",
-    "oauth-ng": "~0.3.6"
+    "oauth-ng": "git://github.com/muymoo/oauth-ng.git#update_angular_1.3.12"
   },
   "license": "MIT"
 }
