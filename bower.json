@@ -14,7 +14,7 @@
     "oauth"
   ],
   "dependencies": {
-    "angular": "1.3.11",
+    "angular": "1.3.12",
     "oauth-ng": "~0.3.6"
   },
   "license": "MIT"
