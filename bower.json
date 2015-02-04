@@ -5,7 +5,7 @@
     "Predix Experience"
   ],
   "description": "OAuth 2.0 implicit grant module for Cloud Foundry UAA",
-  "main": "src/main.js",
+  "main": "dist/px-oauth.min.js",
   "moduleType": [
     "amd"
   ],
