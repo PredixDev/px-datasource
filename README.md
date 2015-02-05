@@ -29,4 +29,4 @@ Then secure your routes by adding 'secure' as their parent.
             })
 ```
 
-See the predix-seed an example.
+See the predix-seed for an example.
