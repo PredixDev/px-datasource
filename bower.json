@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "angular": "1.3.12",
-    "oauth-ng": "https://github.com/muymoo/oauth-ng.git#update_angular_1.3.12",
+    "oauth-ng": "https://github.com/andreareginato/oauth-ng.git#master",
     "angular-ui-router": "~0.2.13"
   },
   "license": "MIT"
