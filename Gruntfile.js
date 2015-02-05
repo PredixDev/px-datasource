@@ -20,7 +20,7 @@ module.exports = function(grunt) {
             src: {
                 src: [
                     'src/**/*.js',
-                    '!src/bower_components/**/*.js'
+                    '!bower_components/**/*.js'
                 ]
             }
         },
@@ -28,12 +28,14 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    baseUrl: 'src',
+                    baseUrl: '.tmp',
                     mainConfigFile: 'config.js',
                     out: 'dist/px-oauth.min.js',
                     include: ['main'],
                     name: '../bower_components/almond/almond',
-                    optimize: 'none',
+                    optimize: 'uglify2',
+                    generateSourceMaps: true,
+                    preserveLicenseComments: false,
                     skipDirOptimize: false,
                     wrap: {
                         startFile: 'build/start.frag',
@@ -56,14 +58,31 @@ module.exports = function(grunt) {
                 }
             }
         },
-        clean: {
-            dist: {
-                // TODO: Remove build artifacts
+
+        //ng-annotate
+        ngAnnotate: {
+            dashboard: {
+                files: [
+                    {
+                        cwd: 'src',
+                        expand: true,
+                        src: ['**/*.js'],
+                        dest: '.tmp'
+                    },
+                    {
+                        'bower_components/oauth-ng/dist/oauth-ng.js': ['bower_components/oauth-ng/dist/oauth-ng.js']
+                    }
+                ]
             }
+        },
+
+        //Clean test directory
+        clean: {
+            dist: ['dist', '.tmp']
         }
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['jshint', 'requirejs']);
+    grunt.registerTask('default', ['clean', 'jshint', 'ngAnnotate', 'requirejs']);
 
 };
