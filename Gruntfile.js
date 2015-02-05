@@ -37,8 +37,8 @@ module.exports = function(grunt) {
                     paths: {
                         angular: 'empty:',
                         'angular-ui-router': 'empty:',
-                        ngstorage: 'bower_components/ngstorage/ngStorage.min',
-                        'oauth-ng': 'bower_components/oauth-ng/dist/oauth-ng'
+                        ngstorage: '../bower_components/ngstorage/ngStorage.min',
+                        'oauth-ng': '../bower_components/oauth-ng/dist/oauth-ng'
                     },
                     shim: {
                         'oauth-ng': {
