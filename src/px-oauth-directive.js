@@ -1,7 +1,7 @@
-define(['angular', './module', 'oauth'], function (angular, module) {
+define(['angular', './oauth-module', 'angular-ui-router', 'oauth-ng'], function (angular, module) {
     'use strict';
 
-    module.directive("pxOauth", function () {
+    module.directive('pxOauth', function () {
         return {
             scope: {
                 site: '=',         // (required) set the oauth server host (e.g. http://oauth.example.com)
@@ -9,9 +9,10 @@ define(['angular', './module', 'oauth'], function (angular, module) {
                 redirectUri: '='   // (required) client redirect uri
             },
             restrict: 'AE',
-            template: "<oauth ng-hide='true' site='{{site}}' client-id='{{clientId}}' redirect-uri='{{redirectUri}}'></oauth>"
+            template: '<oauth ng-hide="true" site="{{site}}" client-id="{{clientId}}" redirect-uri="{{redirectUri}}"></oauth>'
         };
     });
 
     return module;
 });
+

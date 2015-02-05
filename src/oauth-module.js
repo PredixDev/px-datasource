@@ -1,4 +1,6 @@
-define(['angular', 'angular-ui-router', 'oauth'], function(angular) {
+define(['angular', 'angular-ui-router', 'oauth-ng'], function(angular) {
+
+    'use strict';
 
     var module = angular.module('predix.oauth', ['ui.router', 'oauth'])
         .config(function($stateProvider) {
