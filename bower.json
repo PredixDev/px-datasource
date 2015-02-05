@@ -22,5 +22,8 @@
     "oauth-ng": "https://github.com/andreareginato/oauth-ng.git#master",
     "angular-ui-router": "~0.2.13"
   },
+  "devDependencies": {
+    "almond": "latest"
+  },
   "license": "MIT"
 }

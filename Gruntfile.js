@@ -31,9 +31,14 @@ module.exports = function(grunt) {
                     baseUrl: 'src',
                     mainConfigFile: 'config.js',
                     out: 'dist/px-oauth.min.js',
-                    name : 'px-oauth-directive',
+                    include: ['main'],
+                    name: '../bower_components/almond/almond',
                     optimize: 'none',
                     skipDirOptimize: false,
+                    wrap: {
+                        startFile: 'build/start.frag',
+                        endFile: 'build/end.frag'
+                    },
                     paths: {
                         angular: 'empty:',
                         'angular-ui-router': 'empty:',
@@ -42,8 +47,10 @@ module.exports = function(grunt) {
                     },
                     shim: {
                         'oauth-ng': {
-                            deps: ['angular', 'ngstorage'],
-                            exports: 'oauth-ng'
+                            deps: ['angular', 'ngstorage']
+                        },
+                        'ng-storage': {
+                            deps: ['angular']
                         }
                     }
                 }
