@@ -1,5 +1,5 @@
-px-oauth
-========
+px-oauth  [![Build Status](http://alpha.menlo-ci.sw.ge.com:11112/job/px-oauth/badge/icon)](http://alpha.menlo-ci.sw.ge.com:11112/job/px-oauth/)
+========  
 
 You can use the px-oauth module in your application to add implicit grant support for Cloud Foundry UAA.
 
