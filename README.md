@@ -31,3 +31,5 @@ Then secure your routes by adding 'secure' as their parent.
 
 
 See the predix-seed for an example.
+
+This is a wrapper for  [OAuthNG ](http://andreareginato.github.io/oauth-ng/ "OAuthNG")
