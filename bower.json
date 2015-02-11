@@ -1,11 +1,11 @@
 {
-  "name": "px-oauth",
+  "name": "px-datasource",
   "version": "0.0.1",
   "authors": [
     "Predix Experience"
   ],
-  "description": "OAuth 2.0 implicit grant module for Cloud Foundry UAA",
-  "main": "dist/px-oauth.min.js",
+  "description": "Restful communication brought to you by Predix",
+  "main": "dist/px-datasource.min.js",
   "moduleType": [
     "amd"
   ],
@@ -24,8 +24,8 @@
   ],
   "dependencies": {
     "angular": "~1.3",
-    "oauth-ng": "0.3.8",
-    "angular-ui-router": "~0.2.13"
+    "restangular": "~1.4"
+
   },
   "devDependencies": {
     "almond": "latest"

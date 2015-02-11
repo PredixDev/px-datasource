@@ -28,12 +28,11 @@ module.exports = function(grunt) {
         requirejs: {
             compile: {
                 options: {
-                    baseUrl: '.tmp',
                     mainConfigFile: 'config.js',
-                    out: 'dist/px-oauth.min.js',
-                    include: ['main'],
+                    out: 'dist/px-datasource.min.js',
+                    include: ['px-datasource'],
                     name: '../bower_components/almond/almond',
-                    optimize: 'uglify2',
+                    optimize: 'none',
                     generateSourceMaps: true,
                     preserveLicenseComments: false,
                     skipDirOptimize: false,
@@ -43,46 +42,19 @@ module.exports = function(grunt) {
                     },
                     paths: {
                         angular: 'empty:',
-                        'angular-ui-router': 'empty:',
-                        ngstorage: '../bower_components/ngstorage/ngStorage.min',
-                        'oauth-ng': '../bower_components/oauth-ng/dist/oauth-ng'
-                    },
-                    shim: {
-                        'oauth-ng': {
-                            deps: ['angular', 'ngstorage']
-                        },
-                        'ng-storage': {
-                            deps: ['angular']
-                        }
+                        'lodash': 'empty:'
                     }
                 }
             }
         },
 
-        //ng-annotate
-        ngAnnotate: {
-            dashboard: {
-                files: [
-                    {
-                        cwd: 'src',
-                        expand: true,
-                        src: ['**/*.js'],
-                        dest: '.tmp'
-                    },
-                    {
-                        'bower_components/oauth-ng/dist/oauth-ng.js': ['bower_components/oauth-ng/dist/oauth-ng.js']
-                    }
-                ]
-            }
-        },
-
         //Clean test directory
         clean: {
-            dist: ['dist', '.tmp']
+            dist: ['dist']
         }
     });
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'jshint', 'ngAnnotate', 'requirejs']);
+    grunt.registerTask('default', ['clean', 'jshint', 'requirejs']);
 
 };
