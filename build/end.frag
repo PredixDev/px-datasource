@@ -4,8 +4,7 @@
             return window.angular;
         }
         else{
-            throw new Error("Missing required dependency: px-datasource requires angular, please include angular to
-            your application");
+            throw new Error("Missing required dependency: px-datasource requires angular, please include angular to your application");
         }
     });
 
@@ -14,8 +13,7 @@
             return window._;
         }
         else{
-            throw new Error("Missing required dependency: px-datasource requires lodash, please include lodash to
-            your application");
+            throw new Error("Missing required dependency: px-datasource requires lodash, please include lodash to your application");
         }
     });
 
