@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     },
                     paths: {
                         angular: 'empty:',
-                        'lodash': 'empty:'
+                        'underscore': 'empty:'
                     }
                 }
             }
@@ -57,4 +57,5 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('default', ['clean', 'jshint', 'requirejs']);
 
+    grunt.registerTask('dist', ['default']);
 };

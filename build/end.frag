@@ -8,12 +8,12 @@
         }
     });
 
-    define('lodash',[],function(){
+    define('underscore',[],function(){
         if (window._){
             return window._;
         }
         else{
-            throw new Error("Missing required dependency: px-datasource requires lodash, please include lodash to your application");
+            throw new Error("Missing required dependency: px-datasource requires underscore, please include underscore to your application");
         }
     });
 

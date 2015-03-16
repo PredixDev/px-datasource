@@ -12,11 +12,11 @@ require.config({
     paths: {
         angular: '../bower_components/angular/angular.min',
         'restangular': '../bower_components/restangular/dist/restangular.min',
-        'lodash': '../bower_components/restangular/dist/lodash.min'
+        'underscore': '../bower_components/lodash/dist/lodash.min'
     },
     shim: {
         'restangular': {
-            deps: ['lodash', 'angular']
+            deps: ['underscore', 'angular']
         }
     }
 });
