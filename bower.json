@@ -1,6 +1,6 @@
 {
     "name": "px-datasource",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "authors": [
         "Predix Experience"
     ],
@@ -17,7 +17,7 @@
         ".gitignore",
         ".travis.yml",
         "config.js",
-        "Gruntfile.js",
+        "gulpfile.js",
         "package.json",
         "build",
         ".editorconfig"
