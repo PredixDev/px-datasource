@@ -13,6 +13,7 @@
         "predix"
     ],
     "ignore": [
+    "*.enc",
         ".jshintrc",
         ".gitignore",
         ".travis.yml",
